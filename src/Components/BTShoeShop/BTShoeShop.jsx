@@ -27,7 +27,7 @@ export default class BTShoeShop extends Component {
     return (
       <div className="container">
         <h2 className="text-center">Shoes Shop</h2>
-
+        {/* MODAL  */}
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -38,6 +38,7 @@ export default class BTShoeShop extends Component {
                 </button>
               </div>
               <div class="modal-body">
+                {/* SHOE DETAIL  */}
                       <ShoeDetail shoe={this.state.giay} />
               </div>
               <div class="modal-footer">
@@ -49,16 +50,17 @@ export default class BTShoeShop extends Component {
         </div>
 
         <div className="row">
-          <div className="col-2">
+          <div className="col-12 col-md-2">
             <p>Home</p>
             <p>Shop</p>
           </div>
-          <div className="col-10">
+          <div className="col-md-10">
             <div className="row">
               {data.map((value) => {
                 // console.log(value)
                 return (
-                  <div className="col-4 mt-3" key={value.id}>
+                  <div className="col-12 col-md-6 col-lg-4 mt-3" key={value.id}>
+                    {/* SHOE LIST  */}
                     <Shoe product={value} handleShoeDefault={this.handleShoeDefault}/>
                   </div>
                 )

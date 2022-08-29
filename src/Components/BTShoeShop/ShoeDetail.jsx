@@ -5,7 +5,7 @@ export default class ShoeDetail extends Component {
     const { shoe } = this.props
     return (
       <div>
-        <div className="row align-items-center">
+        <div className="row">
           <div className="col-12">
             <img style={{ width: '100%' }} src={shoe.image} alt="" />
           </div>
